@@ -1,0 +1,21 @@
+{
+  "name": "angular-singapore-district-map",
+  "description": "AngularJS directive of Singapore District Map for Condominiums and Private Apartments",
+  "main": "index.js",
+  "authors": [
+    "Lei Mingyu"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/lozy219/angular-singapore-district-map",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-leaflet-directive": "^0.10.0",
+    "angular": "^1.5.8"
+  }
+}

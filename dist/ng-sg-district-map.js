@@ -1,0 +1,1 @@
+var districtMapDirective=function(){return{restrict:"AE",replace:!0,scope:{},template:'<div><leaflet height="500px" width="800px"></leaflet></div>',link:function(i){}}};angular.module("sgDistrictMap",["leaflet-directive"]).directive("sgDistrictMap",districtMapDirective),districtMapDirective.$inject=["$window","$timeout","$document"];

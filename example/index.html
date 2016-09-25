@@ -3,16 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Singapore District Map Example</title>
-    <link rel="stylesheet" href="../bower_components/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="../node_modules/leaflet/dist/leaflet.css">
   </head>
-  <body ng-app="sgDistrictMap">
-    <section>
+  <body ng-app="test">
+    <section ng-controller="MainCtrl">
       <sg-district-map />
     </section>
 
-    <script type="text/javascript" src="../bower_components/leaflet/dist/leaflet.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script type="text/javascript" src="../bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
+    <script type="text/javascript" src="../node_modules/leaflet/dist/leaflet.js"></script>
+    <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../node_modules/angular-leaflet-light/dist/angular-leaflet.js"></script>
     <script type="text/javascript" src="../dist/ng-sg-district-map.js"></script>
+    <script type="text/javascript">
+      angular
+        .module('test', ['sgDistrictMap'])
+        .controller('MainCtrl', ['$scope', function($scope) {
+        }]);
+    </script>
   </body>
 </html>

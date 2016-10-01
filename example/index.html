@@ -17,6 +17,11 @@
     <script type="text/javascript">
       angular
         .module('test', ['sgDistrictMap'])
+        .config(function(sgDistrictMapStyleProvider) {
+          sgDistrictMapStyleProvider.setHighlightStyle({
+            fillColor: "#000"
+          });
+        })
         .controller('MainCtrl', ['$scope', function($scope) {
         }]);
     </script>

@@ -7,7 +7,7 @@
   </head>
   <body ng-app="test">
     <section ng-controller="MainCtrl">
-      {{ selected }}
+      <!-- {{ selected }} -->
       <sg-district-map selected="selected"/>
     </section>
 
@@ -20,7 +20,7 @@
         .module('test', ['sgDistrictMap'])
         .config(function(sgDistrictMapStyleProvider) {
           sgDistrictMapStyleProvider.setHighlightStyle({
-            fillColor: "#000"
+            fillColor: "#777"
           });
         })
         .controller('MainCtrl', ['$scope', function($scope) {

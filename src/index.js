@@ -8,7 +8,6 @@ var districtMapDirective = function($timeout) {
     template: '<div><leaflet id="district" style="height: 500px" on-map-initialized="initMap(map)"></leaflet></div>',
     controller: ['$scope', 'sgDistrictMapStyle', function($scope, sgDistrictMapStyle) {
       $scope.initMap = function(map) {
-        console.log($scope.selectedDistricts);
         map.eachLayer(function (layer) {
             map.removeLayer(layer);
         });

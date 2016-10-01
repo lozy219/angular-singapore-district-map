@@ -7,7 +7,8 @@
   </head>
   <body ng-app="test">
     <section ng-controller="MainCtrl">
-      <sg-district-map />
+      {{ selected }}
+      <sg-district-map selected="selected"/>
     </section>
 
     <script type="text/javascript" src="../node_modules/leaflet/dist/leaflet.js"></script>
@@ -23,6 +24,7 @@
           });
         })
         .controller('MainCtrl', ['$scope', function($scope) {
+          $scope.selected = {};
         }]);
     </script>
   </body>

@@ -5,11 +5,18 @@
     <title>Singapore District Map Example</title>
     <link rel="stylesheet" href="../bower_components/leaflet/dist/leaflet.css">
   </head>
-  <body ng-app="test">
-    <section ng-controller="MainCtrl">
-      {{ selected }}
+  <style type="text/css">
+    .leaflet-container {
+      background-color: white;
+    }
+  </style>
+  <body ng-app="test" ng-controller="MainCtrl">
+    <section>
       <sg-district-map data-selected="selected"/>
     </section>
+    <div style="text-align: center; font-family: monospace">
+      {{ selected }}
+    </div>
 
     <script type="text/javascript" src="../bower_components/leaflet/dist/leaflet.js"></script>
     <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>

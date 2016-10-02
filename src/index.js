@@ -80,6 +80,10 @@ var districtMapProvider = function() {
     this.highlightStyle = Object.assign(this.highlightStyle, style);
   };
 
+  this.setHoverStyle = function(style) {
+    this.hoverStyle = Object.assign(this.hoverStyle, style);
+  };
+
   this.$get = function () {
     return this;
   };

@@ -17,11 +17,15 @@
   },
   "homepage": "https://github.com/lozy219/angular-singapore-district-map#readme",
   "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
+    "gulp-streamify": "^1.0.2",
     "gulp-sync": "^0.1.4",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "angular-leaflet-light": "^0.2.0"

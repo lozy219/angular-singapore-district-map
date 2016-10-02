@@ -1,3 +1,5 @@
+require('angular-leaflet-light');
+
 var districtMapDirective = function($timeout) {
   return {
     restrict: 'AE',

@@ -3,10 +3,10 @@ AngularJS directive of *Singapore District Map for Condominiums and Private Apar
 
 ### Usage
 
-- install via `npm`.
+- install via `bower`.
 
 ```
-npm i angular-singapore-district-map
+bower install angular-singapore-district-map
 ```
 
 - create `<sg-district-map>` directive in the template.

@@ -19,3 +19,6 @@ bower install angular-singapore-district-map
 ### Customization
 
 - pass configuration options to `sgDistrictMapStyleProvider.setHighlightStyle`, `sgDistrictMapStyleProvider.setHoverStyle`, `sgDistrictMapStyleProvider.setDefaultStyle`. See [Leaflet's documentation](http://leafletjs.com/reference.html#path).
+
+### Demo
+[Here](http://uygnim.com/district-map/)

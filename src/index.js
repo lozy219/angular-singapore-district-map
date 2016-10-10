@@ -28,7 +28,11 @@ var districtMapDirective = function($timeout) {
             }
           },
           onEachFeature: function(feature, layer) {
+            layer.bindPopup(feature.properties.name, {'className': 'sg-district-map-popup'});
             layer.on("mouseover", function(e) {
+              if (sgDistrictMapStyle.showPopup) {
+                this.openPopup();
+              }
               layer.setStyle(sgDistrictMapStyle.hoverStyle);
             });
             layer.on("mouseout", function(e) {
@@ -39,7 +43,9 @@ var districtMapDirective = function($timeout) {
               }
             });
             layer.on("click", function(e) {
+              this.closePopup();
               feature.properties.selected = !feature.properties.selected;
+              layer.setStyle(sgDistrictMapStyle.highlightStyle);
               $timeout(function() {
                 if (feature.properties.selected) {
                   $scope.selectedDistricts[feature.properties.id] = feature.properties.name;
@@ -74,6 +80,7 @@ var districtMapProvider = function() {
   this.highlightStyle = clone(this.defaultStyle);
   this.highlightStyle.fillColor = "#FFF";
   this.hoverStyle = clone(this.highlightStyle);
+  this.showPopup = false;
 
   this.setDefaultStyle = function(style) {
     this.defaultStyle = Object.assign(this.defaultStyle, style);
@@ -86,6 +93,10 @@ var districtMapProvider = function() {
   this.setHoverStyle = function(style) {
     this.hoverStyle = Object.assign(this.hoverStyle, style);
   };
+
+  this.setShowPopup = function(bool) {
+    this.showPopup = bool;
+  }
 
   this.$get = function () {
     return this;

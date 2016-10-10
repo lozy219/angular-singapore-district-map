@@ -9,6 +9,9 @@
     .leaflet-container {
       background-color: white;
     }
+    .sg-district-map-popup .leaflet-popup-content-wrapper {
+      border-radius: 0px;
+    }
   </style>
   <body ng-app="test" ng-controller="MainCtrl">
     <section>
@@ -31,6 +34,7 @@
           sgDistrictMapStyleProvider.setHoverStyle({
             fillColor: "#DDD"
           });
+          sgDistrictMapStyleProvider.setShowPopup(true);
         })
         .controller('MainCtrl', ['$scope', function($scope) {
           $scope.selected = {};

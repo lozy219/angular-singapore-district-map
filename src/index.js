@@ -7,7 +7,7 @@ var districtMapDirective = function($timeout) {
     scope: {
       selectedDistricts: '=selected'
     },
-    template: '<div><leaflet id="district" style="height: 500px" on-map-initialized="initMap(map)"></leaflet></div>',
+    template: '<div><leaflet id="district" style="height: 380px" on-map-initialized="initMap(map)"></leaflet></div>',
     controller: ['$scope', 'sgDistrictMapStyle', function($scope, sgDistrictMapStyle) {
       $scope.initMap = function(map) {
         map.eachLayer(function (layer) {
@@ -58,7 +58,7 @@ var districtMapDirective = function($timeout) {
         }).addTo(map);
 
         // Singapore
-        map.setView([1.3521, 103.8198], 11);
+        map.setView([1.34, 103.8198], 11);
       }
     }],
     link: function($scope) {

@@ -1,6 +1,6 @@
 {
   "name": "angular-singapore-district-map",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "AngularJS directive of Singapore District Map for Condominiums and Private Apartments",
   "main": "index.js",
   "scripts": {
